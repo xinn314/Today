@@ -17,7 +17,6 @@ jobs:
     strategy:
       matrix:
         node-version: [16.15.0]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v3
@@ -25,6 +24,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Upload result
+      uses: actions/upload-artifact@v3
+      with:
+        name: api-result
+        path: /public/data.json
     - run: mkdir public
     - run: node fetch.js
     - run: ls -lh public/
