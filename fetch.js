@@ -30,4 +30,4 @@ Promise.resolve()
 	'X-User-Token': data['data']
 }))
 .then(response => response.statusCode === 200 ? response : Promise.reject(response.statusCode))
-.then(response => response.pipe(require('fs').createWriteStream('./public/data.json')))
+.then(response => response.pipe(require('fs').createWriteStream('./data.json')))
