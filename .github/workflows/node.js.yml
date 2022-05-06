@@ -28,7 +28,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: api-result
-        path: /public
-    - run: mkdir public
+        path: ./data.json
     - run: node fetch.js
-    - run: ls -lh public/
+    - run: pwd
