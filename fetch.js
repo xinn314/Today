@@ -26,7 +26,7 @@ Promise.resolve()
 .then(() => request('GET', 'https://v2.jinrishici.com/token'))
 .then(response => response.statusCode === 200 ? response : Promise.reject(response.statusCode))
 .then(response => response.json())
-.then(data => request('GET', 'https://v2.jinrishici.com/sentence', null, {
+.then(data => request('GET', 'https://v2.jinrishici.com/sentence', {
 	'X-User-Token': data['data']
 }))
 .then(response => response.statusCode === 200 ? response : Promise.reject(response.statusCode))
