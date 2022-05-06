@@ -26,6 +26,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: node fetch.js
     - run: pwd
+    - run: ls -aR
+    - run: ls /public
     - name: Upload result
       uses: actions/upload-artifact@v3
       with:
