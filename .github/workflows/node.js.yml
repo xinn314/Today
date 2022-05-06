@@ -31,3 +31,7 @@ jobs:
       with:
         name: api-result
         path: /home/runner/work/Today/Today/data.json
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: api-result
