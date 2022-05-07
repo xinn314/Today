@@ -32,9 +32,8 @@ jobs:
     - name: Upload result
       uses: actions/upload-artifact@v3
       with:
-        name: api-result
-        path: /home/runner/work/Today/Today/data.json
-    - name: Download a Build Artifact
-      uses: actions/download-artifact@v3
-      with:
-        name: api-result
+          name: data.json
+          path: /home/runner/work/Today/Today/data.json
+    - name: publish-artifact-to-git
+      uses: SpinyOwl/publish-artifact-to-git@1.0.0
+        
