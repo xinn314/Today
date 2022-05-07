@@ -27,12 +27,12 @@ jobs:
     - run: node fetch.js
     - run: pwd
     - run: ls -l
-    - run: cd ~
+    - run: cd ..
     - run: ls -l
     - name: Upload result
       uses: actions/upload-artifact@v3
       with:
           name: data.json
-          path: /docs/data.json
+          path: /home/runner/work/Today/Today/data.json
 
 
