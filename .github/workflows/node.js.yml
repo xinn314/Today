@@ -36,4 +36,8 @@ jobs:
           path: /home/runner/work/Today/Today/data.json
     - name: publish-artifact-to-git
       uses: SpinyOwl/publish-artifact-to-git@1.0.0
-        
+      with:
+        branch: main
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
